@@ -1,3 +1,4 @@
+prwaitbar off;
 delfigs;
 obj1 = prnist([0:4],[1:100:1000]);
 figure(1); show(obj1);
