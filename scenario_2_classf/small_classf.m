@@ -6,7 +6,8 @@ w1 = (pca_20*knnc)*classc;
 w2 = (pca_20*vpc)*classc;
 w3 = (pca_20*ldc)*classc;
 w4 = (pca_20*svc)*classc;
-minW = [w1;w2;w3;w4]*minc;
-minW_para = parallel(minW,[4624]);
-minW_trained = trn*minW_para;
+%use median rule to combine
+medianW = [w1;w2;w3;w4]*medianc;
+medianW_para = parallel(medianW,[4624]);
+medianW_trained = trn*medianW_para;
 % to test, you also need to use my_rep_small to get the right data.
